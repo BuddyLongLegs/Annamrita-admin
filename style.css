@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+html {
+  height: 100%;
+}
+body{
+  margin: 0;
+  background: linear-gradient(90deg, rgba(63,231,251,1) 0%, rgba(255,80,170,0.97) 100%);
+  font-family: 'Nunito', sans-serif;
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30rem;
+  max-width: 80vw;
+  padding: 2rem;
+  transform: translate(-50%, -50%);
+  background: rgb(255,255,255);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #222;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #222;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #222;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: rgb(149,165,215);
+  font-size: 12px;
+}
+
+.login-box .user-box input:focus,
+.login-box .user-box input:valid{
+  border-color: rgb(149,165,215);
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: rgb(149,165,215);
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.login-box a:hover {
+  background: rgb(149,165,215);
+  color: #222;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(149,165,215),
+              0 0 25px rgb(149,165,215),
+              0 0 50px rgb(149,165,215),
+              0 0 100px rgb(149,165,215);
+}
+
+@media only screen and (max-width: 720px){
+  .login-box form a{
+    background: rgb(149,165,215);
+    color: #222;
+  }
+}
